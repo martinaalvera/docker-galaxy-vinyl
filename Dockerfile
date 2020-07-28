@@ -6,7 +6,7 @@ MAINTAINER Martina Alvera, martyalvera96@gmail.com
 
 ENV GALAXY_CONFIG_BRAND="Vinyl"
 
-RUN wget https://raw.githubusercontent.com/indigo-dc/Reference-data-galaxycloud-repository/master/elixir-italy.covacs.refdata/location/tool_data_table_conf.xml -O /etc/galaxy/tool_data_table_conf.xml
+RUN wget https://raw.githubusercontent.com/martinaalvera/docker-galaxy-vinyl/dev/tool_data_table_conf.xml -O /etc/galaxy/tool_data_table_conf.xml
 
 WORKDIR /galaxy-central
 
