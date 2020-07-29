@@ -108,11 +108,6 @@
 <!-- Location of annovar_elixir loc file -->
     <table name="annovar" comment_char="#">
         <columns> value, type, path</columns>
-        <file path="/cvmfs/elixir-italy.covacs.refdata/location/annovar.loc" />
-    </table>
-<!-- Location of VINYL_annovar  -->
-    <table name="VINYL_annovar" comment_char="#">
-        <columns>value, type, path</columns>
-	<file path="/cvmfs/elixir-italy.covacs.refdata/location/annovar_vinyl.loc" />
+        <file path="/cvmfs/elixir-italy.covacs.refdata/location/annovar_vinyl.loc" />
     </table>
 </tables>

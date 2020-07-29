@@ -18,19 +18,12 @@ RUN install-tools $GALAXY_ROOT/tools1.yaml && \
     /tool_deps/_conda/bin/conda clean --tarballs --yes > /dev/null && \
     rm /export/galaxy-central/ -rf
 
-#RUN install-tools $GALAXY_ROOT/tools2.yaml && \
-#    /tool_deps/_conda/bin/conda clean --tarballs --yes > /dev/null && \
-#    rm /export/galaxy-central/ -rf
-
 # Install workflows
 RUN mkdir -p $GALAXY_HOME/workflows
 
 RUN wget https://raw.githubusercontent.com/Laniakea-elixir-it/Galaxy-flavours/master/galaxy-vinyl/workflow/Galaxy-Workflow-vinyl_annot_and_optimizer.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-vinyl_annot_and_optimizer.ga
 RUN https://raw.githubusercontent.com/Laniakea-elixir-it/Galaxy-flavours/master/galaxy-vinyl/workflow/Galaxy-Workflow-vinyl_annot_and_survival.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-vinyl_annot_and_survival.ga
 
-#RUN startup_lite && \
-#    galaxy-wait && \
-#    workflow-install --workflow_path $GALAXY_HOME/workflows/ -g http://localhost:8080 -u $GALAXY_DEFAULT_ADMIN_USER -p $GALAXY_DEFAULT_ADMIN_PASSWORD
 #TODO
 #cvmfs configuration for elixir-italy.covacs.refdata
 RUN wget https://raw.githubusercontent.com/indigo-dc/Reference-data-galaxycloud-repository/master/cvmfs_server_config_files/elixir-italy.covacs.refdata.conf -O /etc/cvmfs/config.d/elixir-italy.covacs.refdata.conf
