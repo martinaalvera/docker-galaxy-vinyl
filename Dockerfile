@@ -23,10 +23,10 @@ RUN install-tools $GALAXY_ROOT/tools1.yaml && \
 #    rm /export/galaxy-central/ -rf
 
 # Install workflows
-#RUN mkdir -p $GALAXY_HOME/workflows
+RUN mkdir -p $GALAXY_HOME/workflows
 
-#RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-CoVaCS/galaxy-CoVaCS-workflows/Galaxy-Workflow-CoVaCS.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-CoVaCS.ga
-#RUN wget https://raw.githubusercontent.com/indigo-dc/Galaxy-flavors-recipes/master/galaxy-CoVaCS/galaxy-CoVaCS-workflows/Galaxy-Workflow-covacs_wf_Select_variant.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-covacs_wf_Select_variant.ga
+RUN wget https://raw.githubusercontent.com/Laniakea-elixir-it/Galaxy-flavours/master/galaxy-vinyl/workflow/Galaxy-Workflow-vinyl_annot_and_optimizer.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-vinyl_annot_and_optimizer.ga
+RUN https://raw.githubusercontent.com/Laniakea-elixir-it/Galaxy-flavours/master/galaxy-vinyl/workflow/Galaxy-Workflow-vinyl_annot_and_survival.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-vinyl_annot_and_survival.ga
 
 #RUN startup_lite && \
 #    galaxy-wait && \
