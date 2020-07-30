@@ -22,7 +22,7 @@ RUN install-tools $GALAXY_ROOT/tools1.yaml && \
 RUN mkdir -p $GALAXY_HOME/workflows
 
 RUN wget https://raw.githubusercontent.com/Laniakea-elixir-it/Galaxy-flavours/master/galaxy-vinyl/workflow/Galaxy-Workflow-vinyl_annot_and_optimizer.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-vinyl_annot_and_optimizer.ga
-RUN https://raw.githubusercontent.com/Laniakea-elixir-it/Galaxy-flavours/master/galaxy-vinyl/workflow/Galaxy-Workflow-vinyl_annot_and_survival.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-vinyl_annot_and_survival.ga
+RUN wget https://raw.githubusercontent.com/Laniakea-elixir-it/Galaxy-flavours/master/galaxy-vinyl/workflow/Galaxy-Workflow-vinyl_annot_and_survival.ga -O $GALAXY_HOME/workflows/Galaxy-Workflow-vinyl_annot_and_survival.ga
 
 #TODO
 #cvmfs configuration for elixir-italy.covacs.refdata
