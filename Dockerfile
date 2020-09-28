@@ -33,7 +33,7 @@ RUN wget https://raw.githubusercontent.com/Laniakea-elixir-it/Galaxy-flavours/ma
 #TODO
 #cvmfs configuration for elixir-italy.covacs.refdata
 RUN wget https://raw.githubusercontent.com/indigo-dc/Reference-data-galaxycloud-repository/master/cvmfs_server_config_files/data.elixir-italy-cvmfs.conf -O /etc/cvmfs/config.d/data.elixir-italy-cvmfs.conf
-RUN wget https://github.com/indigo-dc/Reference-data-galaxycloud-repository/blob/master/cvmfs_server_keys/data.elixir-italy-cvmfs.pub -O /etc/cvmfs/keys/data.elixir-italy-cvmfs.pub
+RUN wget https://raw.githubusercontent.com/indigo-dc/Reference-data-galaxycloud-repository/master/cvmfs_server_keys/data.elixir-italy-cvmfs.pub -O /etc/cvmfs/keys/data.elixir-italy-cvmfs.pub
 RUN echo "CVMFS_REPOSITORIES=data.elixir-italy-cvmfs" > /etc/cvmfs/default.local
 
 # Expose port 80 (webserver), 21 (FTP server), 8800 (Proxy)
